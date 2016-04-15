@@ -1,0 +1,66 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "3528da5764ad3583b65e4aed75b0e8a3",
+    "content-hash": "0de1b3e327cf632f9133069e6a762d3d",
+    "packages": [
+        {
+            "name": "bupt1987/html-parser",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bupt1987/html-parser.git",
+                "reference": "6f29e3cca43f62de47cd5d685686962632e93bd0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bupt1987/html-parser/zipball/6f29e3cca43f62de47cd5d685686962632e93bd0",
+                "reference": "6f29e3cca43f62de47cd5d685686962632e93bd0",
+                "shasum": ""
+            },
+            "require": {
+                "ext-dom": "*",
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.6.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "HtmlParser\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "俊杰jerry",
+                    "email": "bupt1987@gmail.com",
+                    "homepage": "http://bupt1987.github.io",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Html Parser",
+            "homepage": "https://github.com/bupt1987/html-parser",
+            "time": "2016-04-12 09:40:51"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "bupt1987/html-parser": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=5.3.0"
+    },
+    "platform-dev": []
+}

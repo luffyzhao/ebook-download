@@ -1,0 +1,22 @@
+{
+    "name": "luffyzhao/ebook-download",
+    "description": "download ebook",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Luffy Zhao",
+            "email": "luffyzhao@vip.126.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.3.0",
+        "bupt1987/html-parser": "dev-master"
+    },
+    "autoload":{
+        "psr-4": {
+            "LuffyZhao\\Ebook\\":"src/",
+            "LuffyZhao\\Ebook\\Driver\\":"lib/driver/"
+        }
+    }
+}
