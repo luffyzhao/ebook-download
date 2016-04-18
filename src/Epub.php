@@ -3,7 +3,6 @@ namespace LuffyZhao\Ebook;
 
 use Exception;
 use ZipArchive;
-use \HtmlParser\ParserDom;
 
 /**
  * EPUB 生成类
