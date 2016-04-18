@@ -34,8 +34,6 @@ class biquku extends Epub
         "setDescription" => 'og:description',
     );
 
-    protected $charset = "GBK";
-
     public function __construct($url)
     {
         parent::__construct();
@@ -68,11 +66,15 @@ class biquku extends Epub
     public function bookChap()
     {
         $list = $this->_dom->find('div#list', 0);
-        foreach ($list->find('a') as $value) {
-            $chapter            = array();
-            $chapter['content'] = $this->getContent($this->_host . $value->href);
-            $chapter['title']   = $value->innerHtml();
-            $this->addChapter($chapter);
+        if ($list) {
+            foreach ($list->find('a') as $value) {
+                $chapter            = array();
+                $chapter['content'] = $this->getContent($this->_host . $value->href);
+                $chapter['title']   = $value->innerHtml();
+                $this->addChapter($chapter);
+            }
+        } else {
+            throw new Exception("在打扫房间", 1);
         }
     }
 

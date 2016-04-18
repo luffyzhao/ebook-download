@@ -290,21 +290,6 @@ abstract class Epub
     }
 
     /**
-     * [gbk_to_utf8 description]
-     * @author luffy<luffyzhao@vip.126.com>
-     * @dateTime 2016-03-09T11:24:27+0800
-     * @param    [type]                   $str [description]
-     * @return   [type]                        [description]
-     */
-    protected function convert($str, $to = 'utf-8')
-    {
-        if ($to == 'utf-8') {
-            return $str;
-        }
-        return mb_convert_encoding($str, 'utf-8', $to);
-    }
-
-    /**
      * 生成文件
      * @author luffy<luffyzhao@vip.126.com>
      * @dateTime 2016-03-09T13:50:29+0800
@@ -415,7 +400,6 @@ abstract class Epub
             $html = $this->load_file($url);
             $this->isCache($url, $html);
         }
-
         return new ParserDom($html);
     }
 
@@ -429,10 +413,6 @@ abstract class Epub
     protected function load_file($url)
     {
         $html = file_get_contents($url);
-        if (isset($this->charset)) {
-            $html = $this->convert($html, $this->charset);
-        }
-
         return $html;
     }
 

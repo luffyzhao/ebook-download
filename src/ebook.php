@@ -35,7 +35,7 @@ class ebook
         $class = "\\LuffyZhao\\Ebook\\Driver\\" . $this->_mapping[$driverPath];
 
         if (!class_exists($class)) {
-            throw new Exception("没有在[{$class}]网站的配置文件中找到对应的驱动");
+            throw new \Exception("没有在[{$class}]网站的配置文件中找到对应的驱动");
         }
         $this->_instance = new $class($url);
     }
